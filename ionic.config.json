@@ -1,0 +1,7 @@
+{
+  "name": "optimizedImage",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
