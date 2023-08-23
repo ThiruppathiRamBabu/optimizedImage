@@ -11,6 +11,26 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
+  {
+    path: 'avatar',
+    loadChildren: () => import('./avatar/avatar.module').then( m => m.AvatarPageModule)
+  },
+  {
+    path: 'thumbnail',
+    loadChildren: () => import('./thumbnail/thumbnail.module').then( m => m.ThumbnailPageModule)
+  },
+  {
+    path: 'icon',
+    loadChildren: () => import('./icon/icon.module').then( m => m.IconPageModule)
+  },
+  {
+    path: 'photo',
+    loadChildren: () => import('./photo/photo.module').then( m => m.PhotoPageModule)
+  },
+  {
+    path: 'card',
+    loadChildren: () => import('./card/card.module').then( m => m.CardPageModule)
+  },
 ];
 
 @NgModule({

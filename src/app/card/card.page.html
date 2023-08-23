@@ -1,0 +1,25 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons>
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Card</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-card>
+    <ng-container *ngIf="imageUrl | async as url">
+      <img [ngSrc]="url" fill style="position: relative; object-fit: contain;" loading="eager"/>
+    </ng-container>
+    <ion-card-header>
+      <ion-card-title>Everest</ion-card-title>
+      <ion-card-subtitle>Everest Mountain</ion-card-subtitle>
+    </ion-card-header>
+
+    <ion-card-content>
+      Mount Everest is Earth's highest mountain above sea level, located in the Mahalangur Himal sub-range of the
+      Himalayas. The China-Nepal border runs across its summit point.
+    </ion-card-content>
+  </ion-card>
+</ion-content>

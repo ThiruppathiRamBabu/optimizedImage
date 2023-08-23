@@ -1,0 +1,43 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons>
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Thumbnail</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+<ion-card>
+  <ion-list>
+
+    <ion-item>
+      <ion-thumbnail slot="start">
+        <ng-container *ngIf="imageUrl | async as url">
+          <img [ngSrc]="url" height="72" width="72" loading="eager"/>
+        </ng-container>
+      </ion-thumbnail>
+      <ion-label> Puppy </ion-label>
+    </ion-item>
+
+    <ion-item>
+      <ion-thumbnail slot="start">
+        <ng-container *ngIf="imgUrl | async as url">
+          <img [ngSrc]="url" height="72" width="72" loading="eager" />
+        </ng-container>
+      </ion-thumbnail>
+      <ion-label> jimmy </ion-label>
+    </ion-item>
+
+    <ion-item lines="none">
+      <ion-thumbnail slot="start">
+        <ng-container *ngIf="imageLink | async as url">
+          <img [ngSrc]="url" height="72" width="72" loading="eager"/>
+        </ng-container>
+      </ion-thumbnail>
+      <ion-label> Tommy </ion-label>
+    </ion-item>
+
+  </ion-list>
+</ion-card>
+</ion-content>

@@ -1,0 +1,37 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons>
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Icon</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-card>
+    <ion-list>
+
+      <ion-item>
+        <ng-container *ngIf="imageUrl | async as url"> 
+            <img [ngSrc]="url" height="32" width="32" slot="start" loading="eager"/>
+          </ng-container>
+        <ion-label>Heart</ion-label>
+      </ion-item>
+
+      <ion-item>
+          <ng-container *ngIf="imgUrl | async as url">
+            <img [ngSrc]="url" height="32" width="32" slot="start" loading="eager"/>
+          </ng-container>
+        <ion-label>Star</ion-label>
+      </ion-item>
+
+      <ion-item lines="none">
+          <ng-container *ngIf="imageLink | async as url">
+            <img [ngSrc]="url" height="32" width="32" slot="start" loading="eager" />
+          </ng-container>
+        <ion-label>Settings</ion-label>
+      </ion-item>
+
+    </ion-list>
+  </ion-card>
+</ion-content>

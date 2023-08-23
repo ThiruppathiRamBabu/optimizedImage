@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "optimizedimage-5c283": {
+      "hosting": {
+        "app": [
+          "optimizedimage-5c283"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "optimizedimage-5c283"
+  }
+}
